@@ -11,28 +11,35 @@
  */
 function CalculateProduct() {
 
-  // initialize the numbers as an empty string
-  let numbers = ""
+  // initialize the product as an empty string
+  let product = ""
     
-  //get the user min
+  //get the first number
   let firstNumber = parseInt(document.getElementById("first-number").value)
 
-  //get the user max
+  //get the second number
   let secondNumber = parseInt(document.getElementById("second-number").value)
-
-  // if min is bigger than max
-  if (userMax < userMin) {
-    numbers = "Please make your min smaller than your max"
-  }
-
-  //use a while loop to display the numbers from 0 up to the user number
-  for (product = 0; firstNumber < counter; counter++)(counter < firstNumber) {
-    
-    // build the string of numbers with a linebreak each time
-    numbers = numbers + counter + "<br>"
-
-  }
   
+  product = 0
+  
+  // Use for loops to calculate the product of the first and second number the user enters
+  for (let counter = 0; counter < secondNumber; counter++) {
+    
+    product = product + firstNumber
+  }
+
+  // for loop for zero
+  for (let counter = 0; counter == secondNumber; counter++) {
+    
+    product = product
+  }
+
+  //for loop for negatives
+  for (let counter = 0; counter > secondNumber; counter--) {
+    
+    product = product - firstNumber
+  }
+
   // return the string of numbers back to html
-  document.getElementById("result").innerHTML = numbers;
+  document.getElementById("result").innerHTML = "The answer of " + firstNumber + " X " + secondNumber + " is " + product + ".";
 }
